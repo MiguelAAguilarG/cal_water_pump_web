@@ -68,6 +68,12 @@ p{
     margin: 1px;
 }
 
+.text-center-footer{
+    text-align: center;
+    padding: 1px;
+    margin: 1px;
+}
+
 .nota, .nota_tabla{
     font-style: italic;
     font-size: small;
