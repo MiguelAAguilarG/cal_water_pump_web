@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 1px;
+    padding: 1px;
+  }
+
+body {
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    margin: 0 auto;
+    font-size: x-large;
+    text-align: center;
+    padding: 5px;
+}
+
+footer{
+    padding: 10px;
+}
+
+p{
+    margin: 1px;
+    padding: 1px;
+}
+
+.datos, .resultados{
+    border: solid 1px;
+    margin: 1px;
+    padding: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.datos{
+    background-color: lightcyan;
+}
+
+.resultados{
+    background-color: aliceblue;
+}
+
+.caja_contenedor{
+    border: solid 2px;
+}
+
+.caja_decimales{
+    display: grid;
+    grid-template-columns: minmax(11em, 11em) minmax(5em, 5em);
+    grid-column: 1 / -1;
+    margin: 2px;
+    padding: 2px;
+}
+
+.caja_datos, .caja_resultados{
+    display: grid;
+    grid-template-columns: minmax(10em, 10em) minmax(5em, 5em) minmax(5em, 5em);
+    grid-column: 1 / -1;
+    margin: 2px;
+    padding: 2px;
+}
+
+.text-right{
+    text-align: right;
+    padding: 1px;
+    margin: 1px;
+}
+
+.nota, .nota_tabla{
+    font-style: italic;
+    font-size: small;
+}
+
+.nota_tabla{
+    display: flex;
+    justify-content: center;
+}
+
+.nota_sinBullets{
+    font-style: italic;
+    font-size: small;
+    list-style-position: inside;
+    list-style-type: none
+}
+
+td{
+    text-align: center;
+    padding: 1px;
+    margin: 1px;
+}
+
+#autor{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#Miblog{
+    text-align: center;
+}

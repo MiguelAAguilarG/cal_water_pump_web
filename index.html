@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang=es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de dimensionamiento de bomba de agua y su tubería</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Miguel Ángel Aguilar García">
+    <script src="app.js" defer></script>
+    <script src="funtions.js" defer ></script>
+
+</head>
+<body>
+    <header>Bomba de agua y su tubería</header>
+
+    <div class="caja_decimales" id="formulario0">
+        <label for="decimales">Decimales (en resultados): </label>
+        <input type="number" min="1" max="4" step="1" value="3" name="decimales" id="decimales" class="datos">
+    </div>
+
+    <div class="caja_contenedor">
+        <form id="formulario">
+            <div class="caja_datos">
+                <label for="altura" class="text-right">Altura del tanque: </label>
+                <input type="number" min="0.1" value="4" step="0.1" name="altura" id="altura" class="datos">
+                <p> [m]</p>
+            </div>
+
+            <div class="caja_datos">
+                <label for="capacidad" class="text-right">Capacidad del tanque: </label>
+                <input type="number" min="1" value="1100" step="1" name="capacidad" id="capacidad" class="datos">
+                <p> [L]</p>
+            </div>
+
+            <div class="caja_datos">
+                <label for="tiempo" class="text-right">Tiempo de llenado: </label>
+                <input type="number" min="1" value="50"  step="1" name="tiempo" id="tiempo" class="datos">
+                <p> [minutos]</p>
+            </div>
+
+            <div class="caja_datos">
+                <label for="eficiencia" class="text-right">eficiencia de la bomba: </label>
+                <input type="number" min="0.1" max="1" value="0.6"  step="0.1" name="eficiencia" id="eficiencia" class="datos">
+                <p></p>
+            </div>
+        </form>  
+    </div>
+
+    <br>
+
+    <div class="caja_contenedor">
+        <div class="caja_resultados">
+            <label for="potencia" class="text-right">Potencia del motor: </label>
+            <p id="potencia" class="resultados"></p>
+            <p> [hp]</p>
+        </div>
+
+        <div class="caja_resultados">
+            <label for="potencia_W" class="text-right"></label>
+            <p id="potencia_W" class="resultados"></p>
+            <p> [W]</p>
+        </div>
+
+        <div class="caja_resultados">
+            <label for="succion" class="text-right">Tubería de succión: </label>
+            <p id="succion" class="resultados"></p>
+            <p> [pulg]</p>
+        </div>
+
+        <div class="caja_resultados">
+            <label for="impulsion" class="text-right">Tubería de impulsión: </label>
+            <p id="impulsion" class="resultados"></p>
+            <p> [pulg]</p>
+        </div>
+
+        <div class="caja_resultados">
+            <label for="flujo" class="text-right">Flujo: </label>
+            <p id="flujo" class="resultados"></p>
+            <p> [L/s]</p>
+        </div>
+
+        <div class="caja_resultados">
+            <label for="velocidad" class="text-right">Velocidad del agua: </label>
+            <p id="velocidad" class="resultados"></p>
+            <p> [m/s]</p>
+        </div>
+    </div>
+
+    <div>
+        <p class="nota">Potencia [hp] = Capacidad [Litros]/ <br> 1000 [L/m<sup>3</sup>]*densidad[1000 kg/m<sup>3</sup>]* <br> altura[m]/(tiempo[min]*60[s/min])* <br> gravedad[9.81 m/s<sup>2</sup>]/745.7[W/hp]/eficiencia;</p>
+
+        <p class="nota_tabla" >
+            <table class="nota_tabla" rules="all">
+                <tr>
+                    <td>flujo máx</td>
+                    <td>impulsión</td>
+                    <td>velocidad máx </td>
+                </tr>
+                <tr>
+                    <td>Q [Litros/seg]</td>
+                    <td>D [pulg]</td>
+                    <td>&#957 [m/seg]</td>
+                </tr>
+                <tr>
+                    <td>0.5</td>
+                    <td>3/4"</td>
+                    <td>2.2</td>
+                </tr>
+                <tr>
+                    <td>1.0</td>
+                    <td>1"</td>
+                    <td>2.48</td>
+                </tr>
+                <tr>
+                    <td>1.6</td>
+                    <td>1 1/4"</td>
+                    <td>2.85</td>
+                </tr>
+                <tr>
+                    <td>3.0</td>
+                    <td>1 1/2"</td>
+                    <td>3.05</td>
+                </tr>
+                <tr>
+                    <td>5.0</td>
+                    <td>2"</td>
+                    <td>3.05</td>
+                </tr>
+                <tr>
+                    <td>8.0</td>
+                    <td>2 1/2"</td>
+                    <td>3.05</td>
+                </tr>
+                <tr>
+                    <td>15.0</td>
+                    <td>3"</td>
+                    <td>3.05</td>
+                </tr>
+                <tr>
+                    <td>25.0</td>
+                    <td>4"</td>
+                    <td>3.05</td>
+                </tr>
+            </table>
+        </p>
+
+        <p class="nota">Diámetro de succión mayor al diámetro de impulsión</p>
+
+        <br>
+        <ul class="nota">
+            <li class="nota_sinBullets">Bibliografía</li>
+            <ul>
+                <li><a href="https://mega.nz/folder/IEJHDYJC#Z2x26icJkkhUTU_AIvJJzA/file/lARWEQDZ" target="_blank">Instalaciones Sanitarias. Ing. Jorge Ortiz B.</a></li>
+            </ul>
+        </ul>
+    </div>
+        
+</body>
+
+<footer>
+    <p id="Miblog"><a href="https://miguelangelaguilargarcia.blogspot.com/2020/04/herramientas-para-calculos-electricos.html" target="_blank">Más herramientas (cálculos eléctricos)</a></p>
+    <p id="autor" > By Miguel Ángel Aguilar García</p>
+</footer>
+</html>
+
+
+
