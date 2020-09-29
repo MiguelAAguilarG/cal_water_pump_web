@@ -13,7 +13,6 @@ function calculo_principal() {
     decimales = Number.parseInt(document.getElementById("decimales").value);
 
     /*datos */
-
     var altura = Number.parseFloat(document.getElementById("altura").value);
     var capacidad = Number.parseFloat(document.getElementById("capacidad").value);
     var tiempo = Number.parseFloat(document.getElementById("tiempo").value);
@@ -44,7 +43,6 @@ function calculo_principal() {
     }
 
     /*resultados */
-
     document.getElementById("potencia").innerHTML = potencia.toFixed(decimales);
     document.getElementById("potencia_W").innerHTML = (potencia*hp).toFixed(decimales);
     document.getElementById("succion").innerHTML = succion;
