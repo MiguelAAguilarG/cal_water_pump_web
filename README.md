@@ -5,4 +5,4 @@
 https://miguelaaguilarg.github.io/cal_water_pump_web/
 
 ### Bibliografía
-[Instalaciones Sanitarias. Ing. Jorge Ortiz B.](https://mega.nz/folder/IEJHDYJC#Z2x26icJkkhUTU_AIvJJzA/file/lARWEQDZ)
+[Instalaciones Sanitarias. Ing. Jorge Ortiz B.](https://miguelangelaguilargarcia.blogspot.com/2020/08/plomeria-hidraulicas-y-sanitarias.html)
